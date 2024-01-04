@@ -20,6 +20,6 @@ from htmlManager import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
-    path('Profolio',views.profolio, name="profolio"),
+    path('Portfolio',views.portfolio, name="portfolio"),
     path('ContactInfo',views.contactInfo, name="contactInfo")
 ]

@@ -6,9 +6,9 @@ def index(request):
    return render(request, "htmlManager/Home.html",
                  {"title": "Home"})
 
-def profolio(request):
-   return render(request, "htmlManager/Profolio.html",
-                 {"title": "Profolio"})
+def portfolio(request):
+   return render(request, "htmlManager/Portfolio.html",
+                 {"title": "Portfolio"})
 
 def contactInfo(request):
    return render(request, "htmlManager/ContactInfo.html",
