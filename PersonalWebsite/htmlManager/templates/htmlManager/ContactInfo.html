@@ -1,13 +1,31 @@
 {% extends "htmlManager/layout.html" %}
-
+{% load static %}
 {% block p %}
 
+<div class="alert-box">
+    Message
+    <span class="close-alert">&times;</span>
+</div>
+
 <ul style="color: white; font-size: 20px; margin-left: 5%;margin-right: 5%; margin-top:5%;">
-    <li>Email: juanhilario5645@gmail.com <a href="mailto:uanhilario5645@gmail.com">dasda</a></li>
-    <li><a href="https://www.linkedin.com/in/juan-hilario-884b0b23a/">LinkedIn</a></li>
-    <li><a href="https://github.com/Juan-Hilario?tab=overview&from=2024-01-01&to=2024-01-03">Github</a></li>
+    <li>
+        My Email: juanhilario5645@gmail.com
+        <img  onclick="copyText()" src="{% static '/assets/img/Clipboard_Icon.png' %}" alt="Copy" class="copyClipboardimg"/> 
+    </li>
+    <li>
+        <a target="_blank" href="https://www.linkedin.com/in/juan-hilario-884b0b23a/">My LinkedIn</a>
+    </li>
+    <li>
+        <a target="_blank" href="https://github.com/Juan-Hilario?tab=overview&from=2024-01-01&to=2024-01-03">My Github</a>
+    </li>
 </ul>
-     
+  
+<script>
+    function copyText(){
+        navigator.clipboard.writeText("juanhilario5645@gmail.com");
+        window.alert("Copied to clipboard!");
+    }
+</script>
 
 {% endblock %}
   

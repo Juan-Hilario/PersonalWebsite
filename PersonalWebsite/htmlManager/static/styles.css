@@ -1,5 +1,42 @@
-.navigation{
-    font-family: Impact;
-    color: #432109;
-    font-size: 20px;
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/fonts/RubikMaps.ttf) format("trueType");
 }
+@font-face{
+    font-family: "Monocraft";
+    src: url(assets/fonts/Monocraft.ttf) format("trueType");
+}
+body{
+    font-family:"Monocraft" ;
+}
+.pageTitle{
+    margin-left: 10px;
+}
+
+.contentStyle1{
+    color: white;
+    position: absolute;
+    font-size: 30px; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    margin-top:5%
+}
+
+.copyClipboardimg{
+    --size: 30px;
+    cursor: pointer;
+    width: var(--size);
+    height: var(--size)
+}
+
+.alert-box{
+    position:absolute;
+    right:0;
+    background-color: goldenrod;
+    font-size: 20px;
+    padding:15px 40px 15px 15px;
+    border-radius: 26px;
+    color: white; 
+}
+
+
