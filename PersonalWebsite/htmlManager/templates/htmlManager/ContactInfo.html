@@ -2,9 +2,8 @@
 {% load static %}
 {% block p %}
 
-<div class="alert-box">
-    Message
-    <span class="close-alert">&times;</span>
+<div class="alert-box color hidden ">
+    Copied to Clipboard
 </div>
 
 <ul style="color: white; font-size: 20px; margin-left: 5%;margin-right: 5%; margin-top:5%;">
@@ -21,10 +20,31 @@
 </ul>
   
 <script>
+    const copyBtn= document.querySelector(".copyClipboardimg");
+    const alertBox= document.querySelector(".alert-box");
+    
     function copyText(){
         navigator.clipboard.writeText("juanhilario5645@gmail.com");
-        window.alert("Copied to clipboard!");
     }
+    
+    copyBtn.addEventListener("click", function(){
+        showAlertbox();
+    })
+
+    function showAlertbox(){
+        alertBox.classList.remove("hidden");
+        alertBox.classList.remove("hide");
+        alertBox.classList.add("show");
+        
+        setTimeout(hideAlertbox,3000);
+    }
+    
+    function hideAlertbox(){
+        alertBox.classList.remove("show");
+        alertBox.classList.remove("hidden");
+        alertBox.classList.add("hide");
+    }
+
 </script>
 
 {% endblock %}

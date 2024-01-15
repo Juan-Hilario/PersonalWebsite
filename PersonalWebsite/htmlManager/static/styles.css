@@ -8,7 +8,9 @@
 }
 body{
     font-family:"Monocraft" ;
+    overflow-x:hidden;/* Makes it so there cannot be a horizontal scroll bar */
 }
+
 .pageTitle{
     margin-left: 10px;
 }
@@ -31,12 +33,51 @@ body{
 
 .alert-box{
     position:absolute;
-    right:0;
-    background-color: goldenrod;
+    right: 0px;
     font-size: 20px;
-    padding:15px 40px 15px 15px;
+    padding:15px 15px 15px 15px;
     border-radius: 26px;
+    text-align: center;
+    z-index:10;
+}
+.alert-box.color{
+    background-color: goldenrod;
     color: white; 
+}
+.alert-box.hidden{
+    background-color: transparent;
+    color: transparent;
+}
+.alert-box .close-alert{
+    position: absolute;
+    right: 10px;
+    top:15px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.alert-box.show{
+    animation: showAlert 1s ease forwards ;
+}
+
+@keyframes showAlert {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%); 
+    }
+}
+.alert-box.hide{
+    animation: hideAlert 3s ease forwards ;
+}
+@keyframes hideAlert {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%); 
+    }
 }
 
 
