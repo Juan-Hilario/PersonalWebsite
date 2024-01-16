@@ -1,3 +1,8 @@
+:root{
+    --primary-color:#432109;
+    --secondary-color: goldenrod;
+    --text-color: white;
+}
 @font-face {
     font-family: "Rubik";
     src: url(assets/fonts/RubikMaps.ttf) format("trueType");
@@ -7,8 +12,19 @@
     src: url(assets/fonts/Monocraft.ttf) format("trueType");
 }
 body{
+    background-color: var(--primary-color);
     font-family:"Monocraft" ;
     overflow-x:hidden;/* Makes it so there cannot be a horizontal scroll bar */
+}
+nav{
+    background-color: var(--secondary-color);
+}
+.contactList{
+    color: var(--text-color); 
+    font-size: 20px; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    margin-top:5%;
 }
 
 .pageTitle{
@@ -16,7 +32,7 @@ body{
 }
 
 .contentStyle1{
-    color: white;
+    color: var(--text-color);
     position: absolute;
     font-size: 30px; 
     margin-left: 5%;
@@ -41,8 +57,8 @@ body{
     z-index:10;
 }
 .alert-box.color{
-    background-color: goldenrod;
-    color: white; 
+    background-color: var(--secondary-color);
+    color: var(--text-color); 
 }
 .alert-box.hidden{
     background-color: transparent;
