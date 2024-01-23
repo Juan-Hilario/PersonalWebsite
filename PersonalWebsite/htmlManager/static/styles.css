@@ -1,6 +1,6 @@
 :root{
-    --primary-color:#432109;
-    --secondary-color: goldenrod;
+    --primary-color:#111010fd;
+    --secondary-color: #FFD700;
     --text-color: white;
 }
 @font-face {
@@ -16,8 +16,17 @@ body{
     font-family:"Monocraft" ;
     overflow-x:hidden;/* Makes it so there cannot be a horizontal scroll bar */
 }
-nav{
+.medBigNav{
     background-color: var(--secondary-color);
+    height: 30px;
+}
+nav.smallNav{
+    background-color: var(--secondary-color);
+    height: 50px;
+}
+
+h1{
+    color: var(--secondary-color)
 }
 .contactList{
     color: var(--text-color); 
