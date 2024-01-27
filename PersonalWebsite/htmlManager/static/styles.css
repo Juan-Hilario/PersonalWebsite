@@ -13,7 +13,7 @@
 }
 body{
     background-color: var(--primary-color);
-    font-family:"Monocraft" ;
+    font-family:"Monocraft";
     overflow-x:hidden;/* Makes it so there cannot be a horizontal scroll bar */
 }
 .medBigNav{
@@ -34,6 +34,7 @@ h1{
     margin-left: 5%;
     margin-right: 5%; 
     margin-top:5%;
+    position:relative;
 }
 
 .pageTitle{
@@ -49,11 +50,14 @@ h1{
     margin-top:5%
 }
 
-.copyClipboardimg{
-    --size: 30px;
-    cursor: pointer;
-    width: var(--size);
-    height: var(--size)
+.contactButton{
+    border-width: 7px; 
+    border-color:white; 
+    background-color: var(--primary-color); 
+    color:var(--secondary-color);
+}
+.contactButtonDiv{
+    padding:10px;
 }
 
 .alert-box{
