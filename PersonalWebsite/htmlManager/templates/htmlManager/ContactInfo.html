@@ -1,50 +1,32 @@
 {% extends "htmlManager/layout.html" %}
 {% load static %}
-{% block p %}
+{% block content %}
 
 <div class="alert-box color hidden ">
     Copied to Clipboard
 </div>
 
-<div class="contactList">
+<div class="contactList" style="margin:0; position: relative; top: 70px">
     
-       <div class="contactButtonDiv"> <button id ="emailButton" class="contactButton" onclick="copyText()">juanhilario5645@gmail.com</button><br></div>
+        <div class="contactButtonDiv"> 
+            <button id ="emailButton" class="contactButton" onclick="copyText()">juanhilario5645@gmail.com</button>
+        </div>
     
-       <div class="contactButtonDiv">  <a target="_blank" href="https://www.linkedin.com/in/juan-hilario-884b0b23a/">
-            <button role="" class="contactButton" >My LinkedIn</button>
-        </a><br></div>
+        <div class="contactButtonDiv">
+            <a target="_blank" href="https://www.linkedin.com/in/juan-hilario-884b0b23a/">
+                <button role="" class="contactButton" >My LinkedIn</button>
+            </a>
+        </div>
     
-        <div class="contactButtonDiv"> <a target="_blank" href="https://github.com/Juan-Hilario">
-            <button role="" class="contactButton" >My Github</button>
-        </a></div>
+        <div class="contactButtonDiv">
+            <a target="_blank" href="https://github.com/Juan-Hilario">
+                <button role="" class="contactButton" >My Github</button>
+            </a>
+        </div>
 </div>
-  
-<script>
-    const copyBtn= document.querySelector("#emailButton");
-    const alertBox= document.querySelector(".alert-box");
-    
-    function copyText(){
-        navigator.clipboard.writeText("juanhilario5645@gmail.com");
-    }
 
-    copyBtn.addEventListener("click", function(){
-        showAlertbox();
-    })
-
-    function showAlertbox(){
-        alertBox.classList.remove("hidden");
-        alertBox.classList.remove("hide");
-        alertBox.classList.add("show");
+<script src="{% static '/scripts/copyAlert.js/' %}">         
         
-        setTimeout(hideAlertbox,3000);
-    }
-    
-    function hideAlertbox(){
-        alertBox.classList.remove("show");
-        alertBox.classList.remove("hidden");
-        alertBox.classList.add("hide");
-    }
-
 </script>
 
 {% endblock %}

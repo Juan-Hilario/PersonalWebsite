@@ -27,7 +27,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="{% url 'portfolio' %}">
-                            Porfolio
+                            Portfolio
                         </a>
                     </li> 
                     <li class="nav-item">
@@ -39,15 +39,40 @@
             </div> 
         </nav> 
         
-        <div class="pageTitle">
-            <header >
-                <h1>{{ title }}</h2>
-            </header>
+        
+        <div class="alert-box color hidden ">
+            Copied to Clipboard
+        </div>
+        <div id="titleDiv">
+            <div class="titleDivBackground">
+                {{ title }}
+            </div>
         </div>
          
-        {% block p %}
+        {% block content %}
     
         {% endblock %}
+        <footer>
+            <div class="socialsCirc">
+                <button id ="emailButton" class="contactButton" onclick="copyText()">
+                    <img/>
+                </button>
+            </div>
+            <div class="socialsCirc">
+                <a target="_blank" href="https://www.linkedin.com/in/juan-hilario-884b0b23a/">
+                    <button role="" class="contactButton" >
+                        <img/>
+                    </button>
+                </a>
+            </div>
+            <div class="socialsCirc">
+                <a target="_blank" href="https://github.com/Juan-Hilario">
+                    <button role="" class="contactButton" >
+                        <img/>
+                    </button>
+                </a>
+            </div>
+        </footer>
         <script>
             const nav = document.querySelector(".navbar");
             const dropDown = document.querySelector(".dropDown")
@@ -73,6 +98,10 @@
            
             updateSize();
             window.addEventListener("resize", updateSize);
+        </script>
+        <script src="{% static '/scripts/copyAlert.js/' %}">
+            
+        
         </script>
         
     </body>
