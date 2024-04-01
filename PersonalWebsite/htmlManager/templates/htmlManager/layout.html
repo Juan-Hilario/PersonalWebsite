@@ -54,21 +54,21 @@
         {% endblock %}
         <footer>
             <div class="socialsCirc">
-                <button id ="emailButton" class="contactButton" onclick="copyText()">
-                    <img/>
+                <button class= "socialsButton"  onclick="copyText()">
+                    <img style="width:60px; height: 60px;" src="{%static 'assets/img/emailIcon.png' %}"/>
                 </button>
             </div>
-            <div class="socialsCirc">
+            <div class="socialsCircd">
                 <a target="_blank" href="https://www.linkedin.com/in/juan-hilario-884b0b23a/">
-                    <button role="" class="contactButton" >
-                        <img/>
+                    <button role="" class="socialsButton">
+                        <img style="width:65px; height: 65px;" src="{%static 'assets/img/linkedinIcon.png' %}"/>
                     </button>
                 </a>
             </div>
             <div class="socialsCirc">
                 <a target="_blank" href="https://github.com/Juan-Hilario">
-                    <button role="" class="contactButton" >
-                        <img/>
+                    <button role="" class="socialsButton" >
+                        <img style="width:60px; height: 60px;" src="{%static 'assets/img/githubIcon.png' %}"/>
                     </button>
                 </a>
             </div>
@@ -100,8 +100,6 @@
             window.addEventListener("resize", updateSize);
         </script>
         <script src="{% static '/scripts/copyAlert.js/' %}">
-            
-        
         </script>
         
     </body>
