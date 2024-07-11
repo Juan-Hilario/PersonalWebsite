@@ -1,9 +1,14 @@
-{% extends "htmlManager/layout.html" %}
-{% load static %}
-{% block content %}
+{% extends "htmlManager/layout.html" %} {% load static %} {% block content %}
 <div>
-    <p class="contentStyle1">
-    This website that I created this website using Django, JavaScript, and a little bootstrap. Thats it so far.</p>
+  <p class="noContentStyle">
+    Nothing yet:( <br />See what I might be working on @
+    <a href="https://github.com/Juan-Hilario">GitHub</a><br /><br />
+    <img
+      style="height: 250px"
+      src="{% static '/assets/img/notHappy.png' %}"
+      alt=""
+    />
+  </p>
 </div>
 
 <!-- <div style="position: absolute; top:50%; right:0;left:50%;">
@@ -42,7 +47,4 @@
       </div>
 </div> -->
 
-
-
 {% endblock %}
-  
