@@ -22,11 +22,7 @@
     <!-- NavBar -->
     <nav class="navbar medBigNav navbar-expand-md navbar-light">
       <!-- NavBrand -->
-      <a
-        class="navbar-brand"
-        href="{% url 'index' %}"
-        style="color: rgb(39, 39, 159)"
-      >
+      <a class="navbar-brand" href="#aboutMe" style="color: rgb(39, 39, 159)">
         <span class="fw-bold text-secondary"> Juan Hilario </span>
       </a>
       <!-- collapse toggle -->
@@ -48,22 +44,18 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="{% url 'portfolio' %}">
-              Portfolio
-            </a>
+            <a class="nav-link active" href="#Portfolio"> Portfolio </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="{% url 'contactInfo' %}">
-              Contact/Info
-            </a>
+            <a class="nav-link active" href="#Contact"> Contact Me </a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div id="titleDiv">
+    <!-- <div id="titleDiv">
       <div class="titleDivBackground">{{ title }}</div>
-    </div>
+    </div> -->
 
     {% block content %} {% endblock %}
     <footer>
