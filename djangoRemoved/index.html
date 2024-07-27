@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Juan's Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- NavBar -->
+    <nav class="navbar medBigNav navbar-expand-md navbar-light">
+      <!-- NavBrand -->
+      <a class="navbar-brand" href="#aboutMe"> JH </a>
+      <!-- collapse toggle -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main-nav"
+        aria-controls="main-nav"
+        arai-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        style="background-color: #ffd700"
+        class="collapse navbar-collapse justify-content-start align-center dropDown medBigNav"
+        id="main-nav"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#Portfolio"> Portfolio </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#Contact"> Contact Me </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+<div id="aboutMe">
+    <div class="subHeading">about me</div>
+
+
+  <div class="contentStyle1">
+    <p>
+      I am a undergraduate in Montclair State University majoring in computer
+      science. I want to become a web developer, but I have some progress to
+      make. My main goal at the moment is to get an internship to fill my
+      lackluster résumé. Whilst doing that I am trying to fill this page with
+      some projects that I will work on and also work on getting
+      certificates.<br />
+      I have a long way to go, but I am ✨learning✨.
+      <br />
+      <div style="margin-left: 10%;">-Juan</div>
+    </p>
+  </div>
+</div>
+<div id="Portfolio">
+  <div>
+    <div class="subHeading">portfolio</div>
+    <p class="noContentStyle">
+      Nothing yet... <br />See what I might be working on @
+      <a href="https://github.com/Juan-Hilario">GitHub</a><br /><br />
+      <img
+        src="assets/img/notHappy.png"
+        alt=""
+      />
+    </p>
+  </div>
+
+  <!-- <div style="position: absolute; top:50%; right:0;left:50%;">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" id="item1">
+                  <img class="d-block " src="{% static '/assets/img/IMG_1040.jpeg' %}" width="500px" height="auto" alt="First slide">
+                </div>
+                <div class="carousel-item" id="item2">
+                  <img class="d-block " src="{% static '/assets/img/IMG_1040.jpeg' %}" width="500px" height="auto"  alt="Second slide">
+                </div>
+                <div class="carousel-item" id="item3">
+                  <img class="d-block " src="{% static '/assets/img/Clipboard_Icon.png' %}" width="500x" height="auto"  alt="Third slide">
+                </div>
+              </div>
+                  <a class="prev" onclick="prev()" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                   </a>
+                  <a class="next" onclick="nextOne()" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+      
+                  <script>
+                      const prev= document.querySelector(".prev");
+                      const next= document.querySelector(".next");
+                      const carouselItem= document.querySelector(".carousel-item");
+                     
+                  
+                      function nextOne(){
+                          carouselItem.classList.remove("active");
+                          carouselItem.classList.add("active");
+                      }
+                  </script>   
+            </div>
+      </div> -->
+</div>
+
+<div id="Contact">
+    <div class="subHeading">contact me @</div>
+  <div class="alert-box hidden">Copied to Clipboard</div>
+
+  <div class="contactList" >
+    <div class="contactButtonDiv">
+      <button id="emailButton" class="contactButton" onclick="copyText()">
+        juanhilario5645@gmail.com
+      </button>
+    </div>
+
+    <div class="contactButtonDiv">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/juan-hilario-884b0b23a/"
+      >
+        <button role="" class="contactButton">My LinkedIn Profile</button>
+      </a>
+    </div>
+
+    <div class="contactButtonDiv">
+      <a target="_blank" href="https://github.com/Juan-Hilario">
+        <button role="" class="contactButton">My Github Page</button>
+      </a>
+    </div>
+  </div>
+</div>
+<footer>
+      <div class="socialsCirc">
+        <a class="socialsButton" href="mailto:juanhilario5645@gmail.com">
+          <img
+            style="width: 60px; height: 60px"
+            src="assets/img/emailIcon.png"
+          />
+        </a>
+      </div>
+      <div class="socialsCirc">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/juan-hilario-884b0b23a/"
+        >
+          <button role="" class="socialsButton">
+            <img
+              style="width: 65px; height: 65px"
+              src="assets/img/linkedinIcon.png"
+            />
+          </button>
+        </a>
+      </div>
+      <div class="socialsCirc">
+        <a target="_blank" href="https://github.com/Juan-Hilario">
+          <button role="" class="socialsButton">
+            <img
+              style="width: 60px; height: 60px"
+              src="assets/img/githubIcon.png"
+            />
+          </button>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const nav = document.querySelector(".navbar");
+      const dropDown = document.querySelector(".dropDown");
+      let viewportWidth = window.innerWidth;
+      function updateSize() {
+        viewportWidth = window.innerWidth;
+        check();
+      }
+
+      function check() {
+        if (viewportWidth <= 768) {
+          nav.classList.remove("medBigNav");
+          nav.classList.add("smallNav");
+          dropDown.classList.remove("medBigNav");
+        } else {
+          nav.classList.remove("smallNav");
+          nav.classList.add("medBigNav");
+          dropDown.classList.add("medBigNav");
+        }
+      }
+
+      updateSize();
+      window.addEventListener("resize", updateSize);
+    </script>
+    <script src="scripts/copyAlert.js/"></script>
+  </body>
+</html>
