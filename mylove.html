@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,7 +9,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link href="{% static 'styles.css' %}" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
     <script
@@ -50,18 +49,28 @@
         </ul>
       </div>
     </nav>
+    <h2 style="padding-top: 50px; text-align: center">
+      I love you Pema Sherpa, Happy 16 Months My Love!!!
+      <img
+        src="assets/img/IMG_1040.jpeg"
+        alt=""
+        style="
+          width: 500px;
+          height: auto;
+          padding-top: 20px;
+          margin-right: auto;
+          margin-left: auto;
+          display: block;
+        "
+      />
+    </h2>
 
-    <!-- <div id="titleDiv">
-      <div class="titleDivBackground">{{ title }}</div>
-    </div> -->
-
-    {% block content %} {% endblock %}
     <footer>
       <div class="socialsCirc">
         <a class="socialsButton" href="mailto:juanhilario5645@gmail.com">
           <img
             style="width: 60px; height: 60px"
-            src="{%static 'assets/img/emailIcon.png' %}"
+            src="assets/img/emailIcon.png"
           />
         </a>
       </div>
@@ -73,7 +82,7 @@
           <button role="" class="socialsButton">
             <img
               style="width: 65px; height: 65px"
-              src="{%static 'assets/img/linkedinIcon.png' %}"
+              src="assets/img/linkedinIcon.png"
             />
           </button>
         </a>
@@ -83,37 +92,11 @@
           <button role="" class="socialsButton">
             <img
               style="width: 60px; height: 60px"
-              src="{%static 'assets/img/githubIcon.png' %}"
+              src="assets/img/githubIcon.png"
             />
           </button>
         </a>
       </div>
     </footer>
-
-    <script>
-      const nav = document.querySelector(".navbar");
-      const dropDown = document.querySelector(".dropDown");
-      let viewportWidth = window.innerWidth;
-      function updateSize() {
-        viewportWidth = window.innerWidth;
-        check();
-      }
-
-      function check() {
-        if (viewportWidth <= 768) {
-          nav.classList.remove("medBigNav");
-          nav.classList.add("smallNav");
-          dropDown.classList.remove("medBigNav");
-        } else {
-          nav.classList.remove("smallNav");
-          nav.classList.add("medBigNav");
-          dropDown.classList.add("medBigNav");
-        }
-      }
-
-      updateSize();
-      window.addEventListener("resize", updateSize);
-    </script>
-    <script src="{% static '/scripts/copyAlert.js/' %}"></script>
   </body>
 </html>
