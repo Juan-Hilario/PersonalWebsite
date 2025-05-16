@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   height="auto"
+   viewBox="0 0 468 472"
+   fill="none"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="logo2.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.92618789"
+     inkscape:cx="191.64578"
+     inkscape:cy="337.94439"
+     inkscape:window-width="1552"
+     inkscape:window-height="1027"
+     inkscape:window-x="295"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="gradient_1"
+       gradientUnits="userSpaceOnUse"
+       x1="641"
+       y1="617"
+       x2="241"
+       y2="247">
+      <stop
+         offset="0"
+         stop-color="#0A0A0A"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#FFFFFF"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <g
+     id="SingleElement"
+     transform="scale(1.037694,1.0654628)">
+    <!-- <path
+                            id="Oval"
+                            d="M0 226C0 101.184 101.184 0 226 0C350.816 0 452 101.184 452 226C452 350.816 350.816 452 226 452C101.184 452 0 350.816 0 226Z"
+                            fill="url(#gradient_1)"
+                            fill-rule="evenodd"
+                        /> -->
+    <path
+       id="Rectangle"
+       d="m 403,0 c 26.513,0 48,21.4867 48,48 v 347 c 0,26.513 -21.487,48 -48,48 H 48 C 21.4867,443 0,421.513 0,395 V 48 C 0,21.4867 21.4867,0 48,0 Z"
+       fill="#8286ed" />
+    <path
+       id="Vector"
+       d="M 26.2723,0 0.720459,120.922 c 0,0 -3.603639,15.125 5.307741,9.952"
+       fill="none"
+       stroke-width="9"
+       stroke="#ffffff"
+       stroke-linecap="round"
+       transform="translate(333,72)" />
+    <path
+       id="path2"
+       d="M 54.9253,129.42 C 22.1372,118.969 13.1467,92.1754 36.9557,69.0016 60.7644,45.8272 150.381,34.5758 150.381,34.5758 c 0,0 37.516,-12.8803 43.875,-22.4819 6.36,-9.60174 -29.558,-34.2478 -51.111,36.0645 C 121.592,118.471 48.0099,331.447 8.68848,288.278 -30.6329,245.108 75.713,245.005 85.2375,243.317 c 9.5245,-1.689 61.7265,-0.01 81.4805,-80.875"
+       fill="none"
+       stroke-width="12"
+       stroke="#ffffff"
+       stroke-linecap="round"
+       transform="translate(86,79)" />
+    <path
+       id="path3"
+       d="m 78.4912,0 c 0,0 -9.8359,91.1679 -29.3694,119.014 C 29.5884,146.86 -0.972168,129.91 0.0236816,111.384 1.01941,92.8576 28.5472,60.3416 69.6893,50.6771 110.831,41.0127 143,20.8211 143,20.8211"
+       fill="none"
+       stroke-width="9"
+       stroke="#ffffff"
+       stroke-linecap="round"
+       transform="translate(240,100)" />
+  </g>
+</svg>
