@@ -1,0 +1,43 @@
+.test-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.test-section {
+  height: 80vh;
+  background-color: purple;
+
+}
+
+.test-section#split {
+  display: flex;
+  background-color: blue;
+}
+
+.test-sticky {
+  position: sticky;
+  top: 0;
+  flex: 4
+}
+
+.test-scrollable {
+  height: 100%;
+  overflow-y: auto;
+  background-color: red;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 80vh;
+}
+
+.test-node {
+  background: lightgreen;
+  color: hotpink;
+  /* margin: 20px 0; */
+}
+
+/* #node-0 { */
+/*   margin-top: 20px; */
+/* } */

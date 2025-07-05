@@ -1,33 +1,18 @@
+import AboutMe from "./AboutMe";
+
 function Home() {
   return (
     <>
       <div className="main">
-        <div id="aboutMe">
-          <div className="subHeading">
-            <h1>about me</h1>
-          </div>
+        <AboutMe />
 
-          <div className="contentStyle1">
-            <p>
-              I am a newly graduated Montclair State University computer science
-              major. I aspire to be a web developer. I am currently job hunting
-              to get some much needed work experience. I have experience with
-              HTML, CSS, JavaScript, TypeScript, Python, React, Figma, and
-              Express.js. I am eager to learn and excited for new opportunities.
-            </p>
-            <br />
-          </div>
-          {/*  Make a timeline of events, if you can't just quit */}
-
-          <div className="timeline"></div>
-        </div>
-        <div id="Portfolio">
+        <div id="portfolio">
           <div>
             <div className="subHeading">
               <h1>portfolio</h1>
             </div>
 
-            <p className="noContentStyle">
+            <p className="noContent">
               Nothing yet... <br />
               See what I might be working on @
               <a href="https://github.com/Juan-Hilario">GitHub</a>
@@ -42,7 +27,7 @@ function Home() {
           </div>
         </div>
 
-        <div id="Contact">
+        <div id="contact">
           <div className="subHeading">
             <h1>contact me @</h1>
           </div>

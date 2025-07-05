@@ -1,0 +1,113 @@
+.topSection {
+  color: white;
+  font-size: 30px;
+}
+
+.timeline {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.timelineTitle {
+  display: grid;
+  justify-items: center;
+}
+
+.timelineSection {
+  flex: 1;
+}
+
+.timelineDate {
+  color: var(--text-color);
+  opacity: .5;
+}
+
+.linkBtn {
+  fill: var(--secondary-color);
+  cursor: pointer;
+}
+
+.nodeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+}
+
+.node {
+  display: grid;
+  background-color: #423941;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  text-align: center;
+  align-content: end;
+  animation: slowBlink 1s linear infinite;
+}
+
+@keyframes slowBlink {
+  50% {
+    opacity: 80%;
+  }
+}
+
+.companyName {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+
+.line {
+
+  height: 100%;
+  position: relative;
+  top: 0;
+  z-index: -1;
+  width: 10px;
+  background-color: #423941;
+}
+
+.timelineEvent {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/**/
+/*/* line */
+/*.firstNode::after {*/
+/*	content: "";*/
+/*	margin: 0 auto;*/
+/*	/*top: 1992px;*/
+/*	/*position: relative;*/
+/*	border-radius: 4px;*/
+/*	width: 10px;*/
+/*	height: 100%;*/
+/*	z-index: -1;*/
+/*	background-color: black;*/
+/*}*/
+/**/
+/*/* line */
+/*.node::after {*/
+/*	display: none;*/
+/*	content: "";*/
+/*	margin: 0 auto;*/
+/*	top: 100px;*/
+/*	position: relative;*/
+/*	border-radius: 4px;*/
+/*	width: 10px;*/
+/*	height: 200px;*/
+/*	z-index: -1;*/
+/*	background-color: black;*/
+/*}*/
+/**/
+.nodeLabel {
+  text-align: center;
+}

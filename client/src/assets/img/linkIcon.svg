@@ -1,0 +1,48 @@
+<svg
+   class="linkBtn"
+   width="50px"
+   height="50px"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="link-svgrepo-com.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.86599048"
+     inkscape:cx="262.12759"
+     inkscape:cy="457.27986"
+     inkscape:window-width="1672"
+     inkscape:window-height="1035"
+     inkscape:window-x="35"
+     inkscape:window-y="43"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Layer 1">
+    <path
+       style="display:inline;fill:#000000"
+       d="m 13.025,9.49 c -0.410101,0.4100592 -0.410101,1.074941 0,1.485 1.152093,1.152055 1.152093,3.019945 0,4.172 l -3.5,3.5 C 6.7439491,21.50839 2.491943,17.255365 5.354,14.475 L 6.379,13.45 C 7.3689995,12.46 5.8839995,10.975 4.894,11.965 L 3.87,12.99 c -4.76133127,4.761331 2.3806687,11.903331 7.142,7.142 l 3.5,-3.5 c 0.92672,-0.926663 1.418003,-2.123884 1.473849,-3.337409 C 16.048858,11.925428 15.557575,10.53551 14.512,9.49 14.101941,9.079899 13.437059,9.079899 13.027,9.49 Z"
+       id="linkBottom" />
+    <path
+       style="display:inline;fill:#000000"
+       d="m 10.975,14.51 c 0.410101,-0.410059 0.410101,-1.074941 0,-1.485 -1.1520933,-1.152055 -1.1520933,-3.019945 0,-4.172 l 3.536,-3.535 c 2.781332,-2.7813321 6.953332,1.3906679 4.172,4.172 l -1.093,1.092 c -0.99,0.99 0.495,2.475 1.485,1.485 l 1.093,-1.092 C 24.929331,6.2136687 17.787331,-0.92833127 13.026,3.833 L 9.49,7.368 c -1.9722954,1.972173 -1.9722954,5.169827 0,7.142 0.41,0.41 1.075,0.41 1.485,0 z"
+       id="linkTop" />
+  </g>
+</svg>
