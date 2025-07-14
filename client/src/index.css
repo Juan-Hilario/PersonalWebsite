@@ -40,9 +40,9 @@ html {
 body {
   background-color: var(--primary-color);
   overflow-x: hidden;
-  /* Makes it so there cannot be a horizontal scroll bar */
   color: var(--text-color);
   overflow-y: auto;
+  margin: 0;
 }
 
 a {
@@ -120,13 +120,13 @@ h6 {
 
 h1 {
   font-family: "Georgia";
-  font-size: 4vw;
+  font-size: 40px;
   color: var(--secondary-color);
 }
 
 h2 {
   font-family: "Georgia";
-  font-size: 3vw;
+  font-size: 35px;
   color: var(--accent);
 }
 
@@ -182,10 +182,6 @@ p {
   top: 60%;
   font-size: 25px;
   margin: 5% 5% 10% 5%;
-}
-
-.noContent img {
-  /* height: 250px; */
 }
 
 .workingImg {

@@ -1,46 +1,39 @@
 #aboutMe {
-  height: 100vh;
-  overflow-y: auto;
   padding-top: 50px;
   display: flex;
-  flex-direction: row;
-  gap: 20px;
   scrollbar-width: none;
 }
 
 .content {
   color: var(--text-color);
-  font-size: 25px;
-  /* margin: 0 5%; */
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   flex: 2;
-  /* position: sticky; */
   top: 0;
 }
 
-.timelineSection {}
-
-.timelineTitle {
-  font-size: 4vw;
-  position: sticky;
+.content p {
+  font-size: 20px;
 }
 
-.timelineTitle h2 {
-  color: var(--secondary-color);
-}
 
 hr {
-  border-top: white solid;
+  /* border-top: white solid; */
   margin: 0;
   margin-bottom: 1rem;
   width: 90%;
 }
 
-/* .timeline { */
-/*   height: 100%; */
-/*   overflow-y: auto; */
-/*   flex: 1; */
-/**/
-/* } */
+@media screen and (orientation: landscape) {
+  #aboutMe {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #aboutMe {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,5 +1,4 @@
 import Timeline from "./Timeline";
-import { useEffect } from "react";
 import "../styles/AboutMe.css";
 function AboutMe() {
   return (
@@ -17,16 +16,7 @@ function AboutMe() {
           </p>
         </div>
 
-        <div className="timelineSection">
-          <div className="timelineTitle">
-            <h2>work history</h2>
-
-            <hr />
-          </div>
-          <div className="timeline">
-            <Timeline />
-          </div>
-        </div>
+        <Timeline />
       </div>
     </>
   );
