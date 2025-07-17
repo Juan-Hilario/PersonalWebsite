@@ -1,0 +1,27 @@
+/* Portfolio */
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+.noContent {
+  /* position: relative; */
+  /* text-align: center; */
+  /* top: 60%; */
+  /* font-size: 25px; */
+  /* margin: 5% 5% 10% 5%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.noContent p {
+  text-indent: 0;
+}
+
+.workingImg {
+  width: 40%;
+  height: auto;
+}

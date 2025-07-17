@@ -1,0 +1,21 @@
+/* Big Screens */
+@media screen and (min-width:992px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  .content p {
+    font-size: clamp(25px, 1vw, 30px);
+  }
+}
+
+/* Small Screens */
+@media screen and (max-width:768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .content p {
+    font-size: clamp(16px, 4vw, 24px);
+  }
+}

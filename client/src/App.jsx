@@ -1,4 +1,5 @@
 import "./App.css";
+import "./styles/fontSizes.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import MyLove from "./components/MyLove";

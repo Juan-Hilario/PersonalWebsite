@@ -1,0 +1,117 @@
+#contact {
+  margin-bottom: 20vh;
+}
+
+.contactList {
+  color: var(--text-color);
+  width: fit-content;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  position: relative;
+  display: grid;
+  grid-template-areas: "email linkedin github";
+  justify-content: space-evenly;
+}
+
+#emailDiv {
+  grid-area: email;
+}
+
+#linkedinDiv {
+  grid-area: linkedin;
+}
+
+#githubDiv {
+  grid-area: github;
+}
+
+.contactButton {
+  z-index: 1;
+  border-width: 5px;
+  border-color: #262323fd;
+  background-color: #262323fd;
+  color: var(--secondary-color);
+  /* border-radius: 10px; */
+  font-size: 30px;
+  justify-content: center;
+}
+
+.contactButtonDiv {
+  padding: 10px;
+}
+
+.copyAlert {
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-width: 1300px) {
+  .contactList {
+    grid-template-areas:
+      "email"
+      "linkedin"
+      "github";
+    justify-items: center;
+  }
+}
+
+
+
+@media (max-width: 770px) {
+
+  .content,
+  .noContent,
+  .contactButton,
+  .nav-link {
+    /* font-size: 3.247vw; */
+    font-size: 20px;
+  }
+
+  .contactButton {
+    border-width: 5px;
+    justify-content: center;
+  }
+
+  .noContent img {
+    height: 32.47vw;
+  }
+
+  .alert-box {
+    left: -36.8vw;
+    border-width: 2.599vw;
+    font-size: 2.599vw;
+    padding: 1.948vw;
+    text-shadow: 0.909vw 1.299vw 0.13vw rgba(23, 21, 21, 0.4),
+      -0.909vw -1.299vw 0.13vw rgba(23, 21, 21, 0.4);
+  }
+}
+
+@media (max-width: 374px) {
+
+  .content,
+  .noContent {
+    font-size: 12px;
+  }
+
+  .contactButton {
+    border-width: 5px;
+
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  .noContent img {
+    height: 120px;
+  }
+
+  .alert-box {
+    left: -137.45px;
+    border-width: 9.72px;
+    font-size: 9.72px;
+    padding: 7.286px;
+    text-shadow: 3.4px 4.86px 0.49px rgba(23, 21, 21, 0.4),
+      -3.4px -4.86px 0.49px rgba(23, 21, 21, 0.4);
+  }
+}

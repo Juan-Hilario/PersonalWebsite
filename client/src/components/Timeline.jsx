@@ -12,22 +12,6 @@ function Timeline() {
       date: "Nov 2024 - Mar 2025",
       link: "https://globifye.com/",
     },
-    {
-      name: "GlobiFYE",
-      logoFile: "",
-      position: "UI/UX Intern",
-      desc: "Used Figma to create and enhance low fidelity wireframes for application development. Collaborated and communicated effectively with the team to ensure designs align with project goals and requirements.",
-      date: "Nov 2024 - Mar 2025",
-      link: "",
-    },
-    {
-      name: "GlobiFYE",
-      logoFile: "globifyeLogo.jpg",
-      position: "UI/UX Intern",
-      desc: "Used Figma to create and enhance low fidelity wireframes for application development. Collaborated and communicated effectively with the team to ensure designs align with project goals and requirements.",
-      date: "Nov 2024 - Mar 2025",
-      link: "",
-    },
   ];
 
   let isScrolling = false;
@@ -53,7 +37,6 @@ function Timeline() {
   }, []);
 
   useEffect(() => {
-    console.log(orientation);
     const timeline = document.querySelector(".timeline");
     if (!timeline) return;
 
@@ -61,10 +44,10 @@ function Timeline() {
       e.preventDefault();
       switch (orientation) {
         case "landscape":
-          handleScrollY(timeline, e, e.deltaY > 0 ? "Down" : "Up");
+          handleScrollY(timeline, e.deltaY > 0 ? "Down" : "Up");
           break;
         case "portrait":
-          handleScrollX(timeline, e, e.deltaX > 0 ? "Right" : "Left");
+          handleScrollX(timeline, e.deltaX > 0 ? "Right" : "Left");
           break;
       }
     }
@@ -75,8 +58,7 @@ function Timeline() {
     };
   });
 
-  function handleScrollX(timeline, e, direction) {
-    console.log(direction);
+  function handleScrollX(timeline, direction) {
     now = Date.now();
 
     if (isScrolling) {
@@ -87,26 +69,25 @@ function Timeline() {
       return;
     }
 
-    const currentNodeIndex = getCurrentNodeIndexY(timeline);
-    console.log(currentNodeIndex);
+    const currentNodeIndex = getCurrentNodeIndex(timeline);
 
     if (direction === "Right") {
       if (currentNodeIndex === experience.length - 1) {
         return;
       } else {
         // Go to next node
-        scrollToNodeY(timeline, currentNodeIndex + 1);
+        scrollToNode(timeline, currentNodeIndex + 1);
       }
     } else {
       if (currentNodeIndex === 0) {
         return;
       } else {
         // Go to previous node
-        scrollToNodeY(timeline, currentNodeIndex - 1);
+        scrollToNode(timeline, currentNodeIndex - 1);
       }
     }
   }
-  function handleScrollY(timeline, e, direction) {
+  function handleScrollY(timeline, direction) {
     now = Date.now();
 
     if (isScrolling) {
@@ -117,26 +98,26 @@ function Timeline() {
       return;
     }
 
-    const currentNodeIndex = getCurrentNodeIndexY(timeline);
+    const currentNodeIndex = getCurrentNodeIndex(timeline);
 
     if (direction === "Down") {
       if (currentNodeIndex === experience.length - 1) {
         return;
       } else {
         // Go to next node
-        scrollToNodeY(timeline, currentNodeIndex + 1);
+        scrollToNode(timeline, currentNodeIndex + 1);
       }
     } else {
       if (currentNodeIndex === 0) {
         return;
       } else {
         // Go to previous node
-        scrollToNodeY(timeline, currentNodeIndex - 1);
+        scrollToNode(timeline, currentNodeIndex - 1);
       }
     }
   }
 
-  function getCurrentNodeIndexY(timeline) {
+  function getCurrentNodeIndex(timeline) {
     const container = document.querySelector("#aboutMe");
     const nodes = document.querySelectorAll(".timelineEvent");
     if (orientation === "landscape") {
@@ -180,7 +161,7 @@ function Timeline() {
     }
   }
 
-  function scrollToNodeY(timeline, index) {
+  function scrollToNode(timeline, index) {
     isScrolling = true;
     scrollStartTime = Date.now();
     if (orientation === "landscape") {
@@ -233,7 +214,11 @@ function Timeline() {
 
         <div className="timeline">
           {experience.map((e, index) => (
-            <div key={index} id={index} className="timelineEvent">
+            <div
+              key={index}
+              id={index}
+              className={`${index === experience.length - 1 ? "timelineEvent lastTimelineEvent" : "timelineEvent"}`}
+            >
               <div className="nodeWrapper">
                 <div className="node" id={`node-${index}`}></div>
                 {experience.indexOf(e) === experience.length - 1 ? null : (
@@ -261,7 +246,7 @@ function Timeline() {
                   </div>
                 </div>
 
-                <h4>{e.position}</h4>
+                <h3>{e.position}</h3>
                 <p className="timelineDesc">{e.desc}</p>
               </div>
             </div>
