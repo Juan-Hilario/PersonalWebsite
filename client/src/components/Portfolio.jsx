@@ -1,4 +1,5 @@
 import "../styles/Portfolio.css";
+import workingImg from "../assets/img/working4.gif";
 
 function Portfolio() {
   return (
@@ -15,7 +16,7 @@ function Portfolio() {
           </p>
           <embed
             className="workingImg"
-            src="src/assets/img/working4.gif"
+            src={workingImg}
             alt="keyboard animation"
           />
         </div>

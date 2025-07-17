@@ -1,12 +1,13 @@
 import LinkIcon from "./LinkIcon";
 import { useEffect, useState } from "react";
 import "../styles/Timeline.css";
+import globiFYELogo from "../assets/img/globifyeLogo.jpg";
 
 function Timeline() {
   const experience = [
     {
       name: "GlobiFYE",
-      logoFile: "globifyeLogo.jpg",
+      logoFile: globiFYELogo,
       position: "UI/UX Intern",
       desc: "Used Figma to create and enhance low fidelity wireframes for application development. Collaborated and communicated effectively with the team to ensure designs align with project goals and requirements.",
       date: "Nov 2024 - Mar 2025",
@@ -231,7 +232,7 @@ function Timeline() {
                   {" "}
                   {e.logoFile ? (
                     <img
-                      src={`src/assets/img/${e.logoFile}`}
+                      src={e.logoFile}
                       className="companyLogo"
                       style={{ borderRadius: "50%" }}
                       alt="GlobiFYE Logo"
