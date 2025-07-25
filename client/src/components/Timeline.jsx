@@ -1,5 +1,5 @@
 import LinkIcon from "./LinkIcon";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "../styles/Timeline.css";
 import globiFYELogo from "../assets/img/globifyeLogo.jpg";
 
@@ -23,34 +23,13 @@ function Timeline() {
     return window.innerHeight > window.innerWidth ? "portrait" : "landscape";
   }
 
-  const [orientation, setOrientation] = useState(getCurrentOrientation());
-
-  useEffect(() => {
-    const handleOrientationChange = () => {
-      setOrientation(getCurrentOrientation());
-    };
-
-    window.addEventListener("resize", handleOrientationChange);
-
-    return () => {
-      window.removeEventListener("resize", handleOrientationChange);
-    };
-  }, []);
-
   useEffect(() => {
     const timeline = document.querySelector(".timeline");
     if (!timeline) return;
 
     function onWheel(e) {
       e.preventDefault();
-      switch (orientation) {
-        case "landscape":
-          handleScrollY(timeline, e.deltaY > 0 ? "Down" : "Up");
-          break;
-        case "portrait":
-          handleScrollX(timeline, e.deltaX > 0 ? "Right" : "Left");
-          break;
-      }
+      handleScrollX(timeline, e.deltaX > 0 ? "Right" : "Left");
     }
     timeline.addEventListener("wheel", onWheel, { passive: false });
 
@@ -88,116 +67,45 @@ function Timeline() {
       }
     }
   }
-  function handleScrollY(timeline, direction) {
-    now = Date.now();
-
-    if (isScrolling) {
-      return;
-    }
-
-    if (now - scrollStartTime < 1500) {
-      return;
-    }
-
-    const currentNodeIndex = getCurrentNodeIndex(timeline);
-
-    if (direction === "Down") {
-      if (currentNodeIndex === experience.length - 1) {
-        return;
-      } else {
-        // Go to next node
-        scrollToNode(timeline, currentNodeIndex + 1);
-      }
-    } else {
-      if (currentNodeIndex === 0) {
-        return;
-      } else {
-        // Go to previous node
-        scrollToNode(timeline, currentNodeIndex - 1);
-      }
-    }
-  }
 
   function getCurrentNodeIndex(timeline) {
     const container = document.querySelector("#aboutMe");
     const nodes = document.querySelectorAll(".timelineEvent");
-    if (orientation === "landscape") {
-      const scrollTop = timeline.scrollTop;
-      const containerHeight = container.clientHeight;
-      const centerPoint = scrollTop + containerHeight / 2;
+    const scrollLeft = timeline.scrollLeft;
+    const containerWidth = container.clientWidth;
+    const centerPoint = scrollLeft + containerWidth / 2;
 
-      let closestIndex = 0;
-      let closestDistance = Infinity;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
 
-      nodes.forEach((node, index) => {
-        const nodeTop = node.offsetTop;
-        const distance = Math.abs(nodeTop - centerPoint);
+    nodes.forEach((node, index) => {
+      const nodeLeft = node.offsetLeft;
+      const distance = Math.abs(nodeLeft - centerPoint);
 
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
 
-      return closestIndex;
-    } else if (orientation === "portrait") {
-      const scrollLeft = timeline.scrollLeft;
-      const containerWidth = container.clientWidth;
-      const centerPoint = scrollLeft + containerWidth / 2;
-
-      let closestIndex = 0;
-      let closestDistance = Infinity;
-
-      nodes.forEach((node, index) => {
-        const nodeLeft = node.offsetLeft;
-        const distance = Math.abs(nodeLeft - centerPoint);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
-
-      return closestIndex;
-    }
+    return closestIndex;
   }
 
   function scrollToNode(timeline, index) {
     isScrolling = true;
     scrollStartTime = Date.now();
-    if (orientation === "landscape") {
-      const navHeight = document
-        .querySelector(".nav")
-        .getBoundingClientRect().height;
-      const timelineTitleHeight = document
-        .querySelector(".timelineTitle")
-        .getBoundingClientRect().height;
-      const footerHeight = document
-        .querySelector("footer")
-        .getBoundingClientRect().height;
-      const heightDeduction = navHeight + timelineTitleHeight + footerHeight;
+    const containerWidth = document
+      .querySelector("#aboutMe")
+      .getBoundingClientRect().width;
+    const screenWidth = screen.width;
+    const widthDeduction = screenWidth - containerWidth;
+    const node =
+      document.querySelector(`#node-${index}`).offsetLeft - widthDeduction;
 
-      const node =
-        document.querySelector(`#node-${index}`).offsetTop - heightDeduction;
-
-      timeline.scrollTo({
-        top: Math.max(0, node),
-        behavior: "smooth",
-      });
-    } else if (orientation === "portrait") {
-      const containerWidth = document
-        .querySelector("#aboutMe")
-        .getBoundingClientRect().width;
-      const screenWidth = screen.width;
-      const widthDeduction = screenWidth - containerWidth;
-      const node =
-        document.querySelector(`#node-${index}`).offsetLeft - widthDeduction;
-
-      timeline.scrollTo({
-        left: Math.max(0, node),
-        behavior: "smooth",
-      });
-    }
+    timeline.scrollTo({
+      left: Math.max(0, node),
+      behavior: "smooth",
+    });
 
     setTimeout(() => {
       isScrolling = false;
@@ -248,7 +156,7 @@ function Timeline() {
                 </div>
 
                 <h3>{e.position}</h3>
-                <p className="timelineDesc">{e.desc}</p>
+                <p className="jobDesc">{e.desc}</p>
               </div>
             </div>
           ))}

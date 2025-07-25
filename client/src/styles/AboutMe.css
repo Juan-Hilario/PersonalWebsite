@@ -24,16 +24,17 @@ hr {
   width: 90%;
 }
 
-@media screen and (orientation: landscape) {
-  #aboutMe {
-    flex-direction: row;
-    gap: 20px;
-  }
+/* @media screen and (orientation: landscape) { */
+/*   #aboutMe { */
+/*     flex-direction: row; */
+/*     gap: 20px; */
+/*   } */
+/* } */
+
+/* @media screen and (orientation: portrait) { */
+#aboutMe {
+  flex-direction: column;
+  gap: 20px;
 }
 
-@media screen and (orientation: portrait) {
-  #aboutMe {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
+/* } */

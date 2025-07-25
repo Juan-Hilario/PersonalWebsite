@@ -4,9 +4,18 @@
   flex-direction: column;
 }
 
+.timelineSection .content {
+  background: rgba(255, 255, 255, .03);
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .timeline {
   height: 100%;
-  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .timelineTitle {
@@ -25,17 +34,32 @@
   opacity: .5;
 }
 
-
-
 .linkBtn {
   fill: var(--secondary-color);
   cursor: pointer;
 }
 
+.timelineEvent {
+  flex-direction: column;
+  display: flex;
+  gap: 5px;
+
+}
+
+@keyframes slowBlink {
+  50% {
+    opacity: 80%;
+  }
+}
+
+/* Node and Line */
+
 .nodeWrapper {
   display: flex;
   align-items: center;
   justify-items: center;
+  flex-direction: row;
+  width: calc(100vw - 40px);
 }
 
 .node {
@@ -52,76 +76,20 @@
   animation: slowBlink 1s linear infinite;
 }
 
-@media screen and (orientation: landscape) {
-  .timelineSection {
-    height: 80vh;
-  }
-
-  .timeline {
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .timelineEvent {
-    flex-direction: row;
-    align-items: start;
-    gap: 20px;
-    height: 100%;
-  }
-
-  .nodeWrapper {
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .line {
-    height: 100%;
-    width: 10px;
-
-  }
+.nodeLabel {
+  text-align: center;
 }
 
-@media screen and (orientation: portrait) {
-  .timelineSection {
-    /* width: 100vw; */
-  }
-
-  .timeline {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-
-  .timelineEvent {
-    flex-direction: column;
-  }
-
-  .timelineDesc {
-    width: 80%;
-  }
-
-  .lastTimelineEvent .content {
-    width: 100vw;
-  }
-
-  .nodeWrapper {
-    flex-direction: row;
-    width: 100%;
-  }
-
-  .line {
-    height: 10px;
-    width: 100vw;
-  }
-
+.line {
+  position: relative;
+  top: 0;
+  z-index: -1;
+  background-color: #423941;
+  height: 10px;
+  width: 100%;
 }
 
-@keyframes slowBlink {
-  50% {
-    opacity: 80%;
-  }
-}
+/* Work History Details */
 
 .companyName {
   display: flex;
@@ -135,18 +103,7 @@
   max-width: 100px;
 }
 
-
-.line {
-  position: relative;
-  top: 0;
-  z-index: -1;
-  background-color: #423941;
-}
-
-.timelineEvent {
-  display: flex;
-}
-
-.nodeLabel {
-  text-align: center;
+.jobDesc {
+  width: 80%;
+  max-width: 950px;
 }
