@@ -14,8 +14,8 @@ function Nav() {
   };
 
   const navLinks = [
-    { name: "Portfolio", path: "" },
-    { name: "Contact me", path: "" },
+    { name: "Portfolio", section: "#portfolio" },
+    { name: "Contact me", section: "#contact" },
   ];
 
   useEffect(() => {
@@ -36,6 +36,20 @@ function Nav() {
 
   const handleSecretBtn = () => {
     navigate("/PEMA");
+  };
+
+  const handleScrollToSection = (selector) => {
+    const section = document.querySelector(selector);
+    const navHeight = document
+      .querySelector("nav")
+      .getBoundingClientRect().height;
+    const sectionPosition = section.getBoundingClientRect().top;
+    const offsetPosition = window.pageYOffset + sectionPosition - navHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -105,10 +119,15 @@ function Nav() {
               </g>
             </svg>
           </div>
+
           {width > 300 ? (
             <div className="links">
               {navLinks.map((link, index) => (
-                <button className="link" key={index} href={link.path || null}>
+                <button
+                  className="link"
+                  key={index}
+                  onClick={() => handleScrollToSection(link.section)}
+                >
                   {link.name}
                 </button>
               ))}

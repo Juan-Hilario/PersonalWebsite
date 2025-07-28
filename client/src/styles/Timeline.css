@@ -52,6 +52,10 @@
   }
 }
 
+.timeline.solo {
+  justify-content: center;
+}
+
 /* Node and Line */
 
 .nodeWrapper {
@@ -87,6 +91,10 @@
   background-color: #423941;
   height: 10px;
   width: 100%;
+}
+
+.timeline.solo .nodeWrapper {
+  display: none;
 }
 
 /* Work History Details */

@@ -28,8 +28,10 @@ function Timeline() {
     if (!timeline) return;
 
     function onWheel(e) {
-      e.preventDefault();
-      handleScrollX(timeline, e.deltaX > 0 ? "Right" : "Left");
+      if (CSS.supports("scroll-behavior", "smooth")) {
+        e.preventDefault();
+        handleScrollX(timeline, e.deltaX > 0 ? "Right" : "Left");
+      }
     }
     timeline.addEventListener("wheel", onWheel, { passive: false });
 
@@ -121,7 +123,9 @@ function Timeline() {
           <hr />
         </div>
 
-        <div className="timeline">
+        <div
+          className={`${experience.length === 1 ? "timeline solo" : "timeline"}`}
+        >
           {experience.map((e, index) => (
             <div
               key={index}
