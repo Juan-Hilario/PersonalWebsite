@@ -1,7 +1,9 @@
-import LinkIcon from "./LinkIcon";
+import LinkIcon from "../LinkIcon";
+import arrowNext from "../../assets/img/arrow-next.svg";
+import arrowPrev from "../../assets/img/arrow-prev.svg";
 import { useEffect } from "react";
-import "../styles/Timeline.css";
-import globiFYELogo from "../assets/img/globifyeLogo.jpg";
+import "../../styles/Timeline.css";
+import globiFYELogo from "../../assets/img/globifyeLogo.jpg";
 
 function Timeline() {
   const experience = [
@@ -13,9 +15,24 @@ function Timeline() {
       date: "Nov 2024 - Mar 2025",
       link: "https://globifye.com/",
     },
+    {
+      name: "GlobiFYE",
+      logoFile: globiFYELogo,
+      position: "UI/UX Intern",
+      desc: "Used Figma to create and enhance low fidelity wireframes for application development. Collaborated and communicated effectively with the team to ensure designs align with project goals and requirements.",
+      date: "Nov 2024 - Mar 2025",
+      link: "https://globifye.com/",
+    },
+    {
+      name: "GlobiFYE",
+      logoFile: globiFYELogo,
+      position: "UI/UX Intern",
+      desc: "Used Figma to create and enhance low fidelity wireframes for application development. Collaborated and communicated effectively with the team to ensure designs align with project goals and requirements.",
+      date: "Nov 2024 - Mar 2025",
+      link: "https://globifye.com/",
+    },
   ];
 
-  let isScrolling = false;
   let now = 0;
   let scrollStartTime = 0;
 
@@ -23,33 +40,25 @@ function Timeline() {
     return window.innerHeight > window.innerWidth ? "portrait" : "landscape";
   }
 
-  useEffect(() => {
-    const timeline = document.querySelector(".timeline");
-    if (!timeline) return;
-
-    function onWheel(e) {
-      if (CSS.supports("scroll-behavior", "smooth")) {
-        e.preventDefault();
-        handleScrollX(timeline, e.deltaX > 0 ? "Right" : "Left");
-      }
-    }
-    timeline.addEventListener("wheel", onWheel, { passive: false });
-
-    return () => {
-      timeline.removeEventListener("wheel", onWheel);
-    };
-  });
-
+  // useEffect(() => {
+  //   const timeline = document.querySelector(".timeline");
+  //   if (!timeline) return;
+  //
+  //   function onWheel(e) {
+  //     if (CSS.supports("scroll-behavior", "smooth")) {
+  //       e.preventDefault();
+  //       handleScrollX(timeline, e.deltaX > 0 ? "Right" : "Left");
+  //     }
+  //   }
+  //   timeline.addEventListener("wheel", onWheel, { passive: false });
+  //
+  //   return () => {
+  //     timeline.removeEventListener("wheel", onWheel);
+  //   };
+  // });
+  //
   function handleScrollX(timeline, direction) {
     now = Date.now();
-
-    if (isScrolling) {
-      return;
-    }
-
-    if (now - scrollStartTime < 1500) {
-      return;
-    }
 
     const currentNodeIndex = getCurrentNodeIndex(timeline);
 
@@ -57,7 +66,6 @@ function Timeline() {
       if (currentNodeIndex === experience.length - 1) {
         return;
       } else {
-        // Go to next node
         scrollToNode(timeline, currentNodeIndex + 1);
       }
     } else {
@@ -94,30 +102,26 @@ function Timeline() {
   }
 
   function scrollToNode(timeline, index) {
-    isScrolling = true;
     scrollStartTime = Date.now();
     const containerWidth = document
       .querySelector("#aboutMe")
       .getBoundingClientRect().width;
     const screenWidth = screen.width;
     const widthDeduction = screenWidth - containerWidth;
-    const node =
-      document.querySelector(`#node-${index}`).offsetLeft - widthDeduction;
+    const node = document.querySelector(`#node-${index}`).offsetLeft;
 
     timeline.scrollTo({
       left: Math.max(0, node),
       behavior: "smooth",
     });
 
-    setTimeout(() => {
-      isScrolling = false;
-    }, 1000);
+    // isScrolling = false;
   }
 
   return (
     <>
       <div className="timelineSection">
-        <div className="timelineTitle">
+        <div className="subtitle">
           <h2>work history</h2>
 
           <hr />
@@ -164,6 +168,24 @@ function Timeline() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="timeline-btns">
+          <button
+            className="timeline-prev"
+            onClick={() =>
+              handleScrollX(document.querySelector(".timeline"), "Left")
+            }
+          >
+            <img src={arrowPrev} style={{ width: "20px" }} />
+          </button>
+          <button
+            className="timeline-next"
+            onClick={() =>
+              handleScrollX(document.querySelector(".timeline"), "Right")
+            }
+          >
+            <img src={arrowNext} style={{ width: "20px" }} />
+          </button>
         </div>
       </div>
     </>

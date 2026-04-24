@@ -34,10 +34,6 @@ function Nav() {
     return () => window.removeEventListener("resize", handleResize);
   }, [width]);
 
-  const handleSecretBtn = () => {
-    navigate("/PEMA");
-  };
-
   const handleScrollToSection = (selector) => {
     const section = document.querySelector(selector);
     const navHeight = document
@@ -137,9 +133,9 @@ function Nav() {
 
         <div className="navLeft">
           {width > 300 ? (
-            <button onClick={() => handleSecretBtn()} className="link secret">
-              &#x2665;
-            </button>
+            <a href="https://pema.juanhilario.me">
+              <button className="link secret">&#x2665;</button>
+            </a>
           ) : (
             <button
               className={`hamburgerBtn ${!collapsed ? "toggled" : null}`}

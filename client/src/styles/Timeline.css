@@ -18,17 +18,6 @@
   overflow-y: hidden;
 }
 
-.timelineTitle {
-  font-size: 4vw;
-  position: sticky;
-  display: grid;
-  justify-items: center;
-}
-
-.timelineTitle h2 {
-  color: var(--secondary-color);
-}
-
 .timelineDate {
   color: var(--text-color);
   opacity: .5;
@@ -114,4 +103,21 @@
 .jobDesc {
   width: 80%;
   max-width: 950px;
+}
+
+.timeline-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.timeline-btns button {
+  border-style: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--accent)
 }

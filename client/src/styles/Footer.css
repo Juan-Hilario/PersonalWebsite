@@ -1,0 +1,50 @@
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: var(--footer-height);
+  padding: 10px 0;
+  /* background-color: var(--secondary-color); */
+  display: flex;
+  justify-content: center;
+
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 4px;
+  width: fit-content;
+
+  background: rgba(98, 153, 56, .5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(98, 153, 56, .5);
+  border-radius: 18px;
+
+}
+
+/* .socialsCirc { */
+/*     border: 1px solid transparent; */
+/**/
+/*     width: 60px; */
+/*     height: 60px; */
+/*     border-radius: 50%; */
+/*     margin: 3px 20px 0 20px; */
+/*     display: flex; */
+/*     justify-content: center; */
+/*     align-items: center; */
+/* } */
+
+/* .socialsButton { */
+/*     border: none; */
+/*     background-color: transparent; */
+/* } */
+
+.socialsIcon {
+  fill: var(--primary-color);
+
+}

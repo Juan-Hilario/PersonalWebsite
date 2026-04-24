@@ -1,8 +1,8 @@
 import "./App.css";
 import "./styles/fontSizes.css";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
-import MyLove from "./components/MyLove";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/PEMA" element={<MyLove />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
