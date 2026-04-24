@@ -15,22 +15,6 @@ function Timeline() {
       date: "Nov 2024 - Mar 2025",
       link: "https://globifye.com/",
     },
-    {
-      name: "GlobiFYE",
-      logoFile: globiFYELogo,
-      position: "UI/UX Intern",
-      desc: "Used Figma to create and enhance low fidelity wireframes for application development. Collaborated and communicated effectively with the team to ensure designs align with project goals and requirements.",
-      date: "Nov 2024 - Mar 2025",
-      link: "https://globifye.com/",
-    },
-    {
-      name: "GlobiFYE",
-      logoFile: globiFYELogo,
-      position: "UI/UX Intern",
-      desc: "Used Figma to create and enhance low fidelity wireframes for application development. Collaborated and communicated effectively with the team to ensure designs align with project goals and requirements.",
-      date: "Nov 2024 - Mar 2025",
-      link: "https://globifye.com/",
-    },
   ];
 
   let now = 0;
@@ -169,24 +153,26 @@ function Timeline() {
             </div>
           ))}
         </div>
-        <div className="timeline-btns">
-          <button
-            className="timeline-prev"
-            onClick={() =>
-              handleScrollX(document.querySelector(".timeline"), "Left")
-            }
-          >
-            <img src={arrowPrev} style={{ width: "20px" }} />
-          </button>
-          <button
-            className="timeline-next"
-            onClick={() =>
-              handleScrollX(document.querySelector(".timeline"), "Right")
-            }
-          >
-            <img src={arrowNext} style={{ width: "20px" }} />
-          </button>
-        </div>
+        {experience.length > 1 ? (
+          <div className="timeline-btns">
+            <button
+              className="timeline-prev"
+              onClick={() =>
+                handleScrollX(document.querySelector(".timeline"), "Left")
+              }
+            >
+              <img src={arrowPrev} style={{ width: "20px" }} />
+            </button>
+            <button
+              className="timeline-next"
+              onClick={() =>
+                handleScrollX(document.querySelector(".timeline"), "Right")
+              }
+            >
+              <img src={arrowNext} style={{ width: "20px" }} />
+            </button>
+          </div>
+        ) : null}
       </div>
     </>
   );
